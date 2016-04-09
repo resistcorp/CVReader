@@ -1,0 +1,23 @@
+<div id="header">
+	<img ng-if="CVData.head.showPortrait" id="portrait" ng-src="./{{CVData.head.portrait}}" />
+	<div id="header-texts">
+		<h1 id="title" ng-bind="CVData.head.title"></h1>
+		<h2 id="subtitle" ng-bind="CVData.head.subtitle"></h2>
+		<h3 id="quote" ng-bind="CVData.head.quote"></h3>
+	</div>
+	<div ng-if="CVData.head.showContact" id="header-contact">
+	</div>
+</div>
+<div id="body">
+	<div class="main-section">
+		<cv-count-container id="SkillSet" class="CountersContainer" data="CVData.body.SkillSet">
+		</cv-count-container>
+		<img ng-if="CVData.body.showQR" id="QRCode" ng-src="./{{CVData.body.QR}}" />
+		<cv-count-container id="Techs" class="CountersContainer" data="CVData.body.Techs">
+		</cv-count-container>
+	</div>
+	<div id="timeline"></div>
+</div>
+<div id="footer">
+	<!--<pre ng-bind="serialized"></pre>//-->
+</div>

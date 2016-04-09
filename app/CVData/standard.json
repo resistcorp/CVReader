@@ -1,0 +1,77 @@
+{
+	"head" : {
+			"title" : "Boris Evieux",
+			"subtitle" : "Versatile coder - Problem Solver",
+			"quote" : "I'm proficient, project-oriented and proactive. I make games. I love them",
+
+			"showContact": true,
+			"showPortrait": true,
+			"portrait": "img/boris.png"
+		},
+	"body" : {
+		"showQR" : true,
+		"QR" : "img/QRBoris.jpg",
+		"SkillSet" : {
+			"title" : "Skill Set",
+			"sections" : {
+				"coding" : {
+					"title" : "Coding",
+					"subtitle" : "architecture, UI, engines, scripting",
+					"disabled" : false,
+					"score" : 1.0
+				},
+				"algorithms" : {
+					"title" : "Algorithms",
+					"subtitle" : "",
+					"disabled" : false,
+					"score" : 1.0
+				},
+				"design" : {
+					"title" : "Design",
+					"subtitle" : "Tech design, game design",
+					"disabled" : false,
+					"score" : 1.0
+				},
+				"team_management" : {
+					"title" : "Team Management",
+					"subtitle" : "architecture, UI, engines, scripting",
+					"disabled" : false,
+					"score" : 1.0
+				}
+			},
+			"moreTxt" : "More :",
+			"more" : "Team player, Tools design and development,..."
+		},
+		"Techs" : {
+			"title" : "Skill Set",
+			"sections" : {
+				"coding" : {
+					"title" : "Coding",
+					"subtitle" : "architecture, UI, engines, scripting",
+					"disabled" : false,
+					"score" : 1.0
+				},
+				"algorithms" : {
+					"title" : "Algorithms",
+					"subtitle" : "",
+					"disabled" : false,
+					"score" : 1.0
+				},
+				"design" : {
+					"title" : "Design",
+					"subtitle" : "Tech design, game design",
+					"disabled" : false,
+					"score" : 1.0
+				},
+				"team_management" : {
+					"title" : "Team Management",
+					"subtitle" : "architecture, UI, engines, scripting",
+					"disabled" : false,
+					"score" : 1.0
+				}
+			},
+			"moreTxt" : "More :",
+			"more" : "Team player, Tools design and development,..."
+		}
+	}
+}
