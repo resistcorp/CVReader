@@ -4,7 +4,6 @@ scaffolded with angular-seed
 
 uses :
 
-
 [git]: http://git-scm.com/
 [bower]: http://bower.io
 [npm]: https://www.npmjs.org/
