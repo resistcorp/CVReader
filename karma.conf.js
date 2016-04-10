@@ -7,13 +7,14 @@ module.exports = function(config){
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/components/**/*.js',
-      'app/view*/**/*.js'
+      'app/bower_components/requirejs/require.js',
+      'app/components/**/*-test.js',
+      'app/**/**/*-test.js'
     ],
 
     autoWatch : true,
 
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'requirejs'],
 
     browsers : ['Chrome'],
 
@@ -21,6 +22,7 @@ module.exports = function(config){
             'karma-chrome-launcher',
             'karma-firefox-launcher',
             'karma-jasmine',
+            'karma-requirejs',
             'karma-junit-reporter'
             ],
 
