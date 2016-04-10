@@ -9,8 +9,44 @@
 			"portrait": "img/boris.png"
 		},
 	"body" : {
-		"showQR" : true,
 		"QR" : "img/QRBoris.jpg",
+		"timelineStart" : 1999,
+		"timelineEnd" : "now",
+		"showQR" : true,
+		"events" : [
+			{
+				"type" : "A",
+				"title" : "Baccalauréat",
+				"where" : "Lycée les trois sources, Valence, FR",
+				"date" : "1999",
+				"info" : "Specialization sciences - Biology. Honourable mention",
+				"moreInfo" : "In France, the Baccalauréat sanctions the end of secondary education. You choose a spec, and a focus. For me it was sciences, focused on \"SVT\",, or \"Life and Earth\" : biology, geology.\nYou get a mention if you exceed certain marks : I got \"Assez bien\" : Honourable for a 12+ average grade."
+			},
+			{
+				"type" : "A",
+				"title" : "DEUG LEA En-Es",
+				"where" : "Université Stendhal - Grenoble III, Valence, FR",
+				"date" : "2002",
+				"info" : "General College degree, in Foreign Languages. Studied English and Spanish",
+				"moreInfo" : "A two-year course in foreign languages"
+			},
+			{
+				"type" : "A",
+				"title" : "DNTS Génie Logiciel",
+				"where" : "IUT, Université St-Etienne 2, Roanne, FR",
+				"date" : "2003",
+				"info" : "Professional College degree in Computer Sciences. That is roughly equivalent to a Bachelor's.",
+				"moreInfo" : "This is a one -year course spent 1/3 in College, and the other 2/3 working in a company as an apprentice."
+			},
+			{
+				"type" : "A",
+				"title" : "Master Jeux et Media Interactifs Numériques",
+				"where" : "ENJMIN, Angoulême, FR",
+				"date" : "2007",
+				"info" : "Professional College degree in Computer Sciences. That is roughly equivalent to a Bachelor's.",
+				"moreInfo" : "This is a one -year course spent 1/3 in College, and the other 2/3 working in a company as an apprentice."
+			}
+		],
 		"SkillSet" : {
 			"title" : "Skill Set",
 			"sections" : {
