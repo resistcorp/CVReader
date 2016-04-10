@@ -1,6 +1,14 @@
 <h3 class="title" ng-bind="data.title"></h3>
 <ul>
-	<li ng-repeat="(nom, section) in data.sections" ng-if="!section.disabled">{{section.title}}</li>
+	<li class="counter" ng-repeat="section in data.sortedSections" ng-if="!section.disabled" id="sect-{{section.id}}">
+		<div class="infoContainer">
+			<span class="title">{{section.title}}</span>
+			<span class="subtitle" ng-if="!!section.subtitle">{{section.subtitle}}</span>
+		</div>
+		<div class="tickerContainer">
+			<div ng-repeat="i in [1,2,3,4,5,6]" ng-class="'ticker ' +getClassForValue(section, i, 6)"></div>
+		</div>
+	</li>
 </ul>
 <h4 class="title" ng-bind="data.moreTxt" ng-if="data.more != ''"></h4>
-<p class="title" ng-bind="data.more" ng-if="data.more != ''"></p>
+<p class="more" marked="data.more" ng-if="data.more != ''"></p>

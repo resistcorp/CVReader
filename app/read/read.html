@@ -10,13 +10,15 @@
 </div>
 <div id="body">
 	<div class="main-section">
-		<cv-count-container id="SkillSet" class="CountersContainer" data="CVData.body.SkillSet">
+		<cv-count-container id="SkillSet" class="countersContainer" data="CVData.body.SkillSet">
 		</cv-count-container>
-		<img ng-if="CVData.body.showQR" id="QRCode" ng-src="./{{CVData.body.QR}}" />
-		<cv-count-container id="Techs" class="CountersContainer" data="CVData.body.Techs">
+		<div class="middleZone">
+			<a ng-href="{{CVData.body.QRAddress}}" target="_blank" ng-if="CVData.body.showQR"><img id="QRCode" ng-src="./{{CVData.body.QR}}" /></a>
+		</div>
+		<cv-count-container id="Techs" class="countersContainer" data="CVData.body.Techs">
 		</cv-count-container>
 	</div>
-	<div id="timeline"></div>
+	<cv-timeline id="timeline" dates="dates"></cv-timeline>
 </div>
 <div id="footer">
 	<!--<pre ng-bind="serialized"></pre>//-->

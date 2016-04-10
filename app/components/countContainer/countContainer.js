@@ -1,15 +1,9 @@
-{
+{//don't pollute
 	function CountContainerController($scope) {
-		console.log("controller called", $scope, $scope.data);
-		$scope.sections = [];
-		if($scope.data && $scope.data.sections){
-			console.log("sections", $scope.data.sections);
-			for(var s in $scope.data.sections){
-				console.log(s, $scope.data.sections[s]);
-				$scope.sections.push($scope.data.sections[s]);
-			}
-		}else{
-			console.log("no sections", $scope.data);
+		$scope.getClassForValue = function(_section, _i, _max){
+			if(_i/_max <= _section.score)
+				return "yes";
+			return "no";
 		}
 	}
 

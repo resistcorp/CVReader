@@ -10,6 +10,7 @@
 		},
 	"body" : {
 		"QR" : "img/QRBoris.jpg",
+		"QRAddress" : "https://fr.linkedin.com/in/borisevieux",
 		"timelineStart" : 1999,
 		"timelineEnd" : "now",
 		"showQR" : true,
@@ -50,64 +51,59 @@
 		"SkillSet" : {
 			"title" : "Skill Set",
 			"sections" : {
-				"coding" : {
-					"title" : "Coding",
-					"subtitle" : "architecture, UI, engines, scripting",
-					"disabled" : false,
-					"score" : 1.0
-				},
 				"algorithms" : {
 					"title" : "Algorithms",
 					"subtitle" : "",
 					"disabled" : false,
 					"score" : 1.0
 				},
+				"coding" : {
+					"title" : "Coding",
+					"subtitle" : "architecture, UI, engines, scripting",
+					"disabled" : false,
+					"score" : 1.0,
+					"order" : 2
+				},
 				"design" : {
 					"title" : "Design",
 					"subtitle" : "Tech design, game design",
 					"disabled" : false,
-					"score" : 1.0
+					"score" : 0.9
 				},
 				"team_management" : {
 					"title" : "Team Management",
 					"subtitle" : "architecture, UI, engines, scripting",
 					"disabled" : false,
-					"score" : 1.0
+					"score" : 0.6
 				}
 			},
 			"moreTxt" : "More :",
-			"more" : "Team player, Tools design and development,..."
+			"more" : "Tools design and development, Engine architecture, OOP, UI Design, AI, ...And general computer skills\n\n... I'm also a great team player!"
 		},
 		"Techs" : {
-			"title" : "Skill Set",
+			"title" : "Technologies",
 			"sections" : {
-				"coding" : {
-					"title" : "Coding",
-					"subtitle" : "architecture, UI, engines, scripting",
+				"javascript" : {
+					"title" : "JS",
+					"subtitle" : "vanilla,jquery,node,angular,mootools,...",
 					"disabled" : false,
 					"score" : 1.0
 				},
-				"algorithms" : {
-					"title" : "Algorithms",
-					"subtitle" : "",
+				"actionscript" : {
+					"title" : "AS3 (and 1 and 2...)",
+					"subtitle" : "Starling / Feathers, MXML, Greensock",
 					"disabled" : false,
 					"score" : 1.0
 				},
-				"design" : {
-					"title" : "Design",
-					"subtitle" : "Tech design, game design",
+				"web" : {
+					"title" : "web tech",
+					"subtitle" : "HTML5, CSS3, Cloud, REST APIs, No-SQL...",
 					"disabled" : false,
-					"score" : 1.0
-				},
-				"team_management" : {
-					"title" : "Team Management",
-					"subtitle" : "architecture, UI, engines, scripting",
-					"disabled" : false,
-					"score" : 1.0
+					"score" : 0.9
 				}
 			},
-			"moreTxt" : "More :",
-			"more" : "Team player, Tools design and development,..."
+			"moreTxt" : "But also :",
+			"more" : "**the right language for the right job** : I've learned and used many languages such as bash/windows batch, python, clojure, c++,...\n\nCollaboration / Source Control : SVN, Git,..."
 		}
 	}
 }
