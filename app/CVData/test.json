@@ -1,0 +1,18 @@
+{
+	"head" : {
+			"title" : "Boris Evieux !"
+		},
+	"body" : {
+		"Techs" : {
+			"title" : "Technologies !",
+			"sections" : {
+				"actionscript" : {
+					"title" : "AS3 (and 1 and 2...)",
+					"subtitle" : "Starling / Feathers, MXML, Greensock",
+					"disabled" : true,
+					"score" : 1.0
+				}
+			}
+		}
+	}
+}
