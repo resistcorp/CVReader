@@ -9,11 +9,15 @@
 			"portrait": "img/boris.png"
 		},
 	"body" : {
+		"showQR" : true,
 		"QR" : "img/QRBoris.jpg",
 		"QRAddress" : "https://fr.linkedin.com/in/borisevieux",
+		"showGH" : true,
+		"GitHubAddress" : "https://github.com/resistcorp",
+		"showTwitter" : true,
+		"TwitterHandle" : "bevieux",
 		"timelineStart" : 1999,
 		"timelineEnd" : "now",
-		"showQR" : true,
 		"events" : [
 			{
 				"type" : "A",
@@ -85,7 +89,7 @@
 			"sections" : {
 				"javascript" : {
 					"title" : "JS",
-					"subtitle" : "vanilla,jquery,node,angular,mootools,...",
+					"subtitle" : "vanilla, jquery, node, angular, mootools, ...",
 					"disabled" : false,
 					"score" : 1.0
 				},
