@@ -5,7 +5,7 @@ angular.module('CVReader', [
   'ngRoute',
   'hc.marked',
   'CVReader.read',
-  'CVReader.edit',
+  //'CVReader.edit',
   'CVReader.countContainer',
   'CVReader.timeline',
   'CVReader.version'

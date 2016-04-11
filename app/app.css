@@ -36,16 +36,18 @@ body, html{
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
-  height: 185px;
+  min-height: 185px;
   width: 100%;
   background-color: #555;
   color: #FFF;
+  transition: height 0.5s;
 }
 #header #portrait{
   margin: 20px;
   margin-bottom: -1.5px;
-  height: 90%;
+  height: 150px;
   box-shadow: 0 10px 5px -8px gray;
+  transition: height 0.5s;
 }
 #header #header-texts{
   flex-direction: column;
@@ -68,6 +70,7 @@ body, html{
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
+  transition: flex-direction 1.0s;
 }
 .middleZone{
   display: flex;
@@ -101,9 +104,9 @@ ul.counterLst{
   list-style: none;
   clear: both;
 }
-@media (max-width : 1200px) {
+@media screen and (max-width : 1200px) {
   #header{
-    height : 165px;
+    min-height : 165px;
   }
   .counter{
     flex-direction: column;
@@ -115,9 +118,12 @@ ul.counterLst{
     padding-bottom: 5px;
   }
 }
-@media (max-width : 800px) {
+@media screen and (max-width : 800px) {
   #header{
-    height : 135px;
+    min-height : 135px;
+  }
+  #header #portrait{
+    height : 100px;
   }
   #header h1{
     font-size: 1.2em;
@@ -149,6 +155,11 @@ ul.counterLst{
     padding: 0 10px;
     border: 1px solid #666;
     border-radius: 10px;
+  }
+}
+@media screen and (max-width : 550px) {
+  .counter{
+    flex-direction: column-reverse;
   }
 }
 .counter .title{
@@ -238,7 +249,7 @@ ul.counterLst{
   #QRCode{
     display: block;
   }
-  #InLogo, .socialLink{
+  .socialLogo, .socialLink{
     display: none;
   }
 }
