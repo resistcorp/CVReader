@@ -1,0 +1,10 @@
+{
+	"head" : {
+			"showPortrait": false
+	},
+	"body" : {
+		"Techs" : {
+			"title" : "Technologies ♥"
+		}
+	}
+}

@@ -216,23 +216,41 @@ ul.counterLst{
   border: none;
   height : 4px;
   position: relative;
-  top : -15px;
+  top : 15px;
   margin: 0;
   padding: 0;
   width : calc(100% - 40px);
 }
 #timeline .year{
+  /* position: absolute; */
+}
+#timeline .year .bg, #timeline .year .fg{
   display: block;
-  background-color: #333;
-  width : 25px;
-  height : 25px;
+  position: absolute;
+  width : 24px;
+  height : 24px;
   border-radius: 50%;
+}
+#timeline .year .bg{
+  background-color: #333;
+}
+#timeline .year .fg{
+  background-color: #fff;
+  width : 16px;
+  height : 16px;
+  margin: 4px;
+}
+#timeline .year .name{
+  transform: rotate(-35deg);
+  position: absolute;
+  top : 30px;
+
 }
 .datesContainer{
   position: relative;
   height: 25px;
   top : 0px;
-  margin: 0 25px;
+  margin: 0 85px 0 25px;
 }
 #QRCode{
   height: 185px;

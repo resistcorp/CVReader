@@ -15,9 +15,9 @@ factory('StandardData', ['$http', function($http) {
    }]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider
-   .when('/read/:CVName', {
+   .when('/read/:CVNames*', {
     templateUrl: 'read/read.html',
     controller: 'ReadCVCtrl'
   })
-  .otherwise({redirectTo: '/read/standard'});
+  .otherwise({redirectTo: '/read'});
 }]);

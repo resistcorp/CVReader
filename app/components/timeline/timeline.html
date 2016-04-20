@@ -1,8 +1,12 @@
+<div></div>
 <div>
-	<div class="datesContainer">
-		<div ng-repeat="(i, year) in dates" ng-class="'year ' + 'placeholder'"></div>
-	</div>
 	<hr class="timelineBase" ng-if="dates.length"/>
+	<div class="datesContainer">
+		<div ng-repeat="(i, year) in dates" ng-class="'year ' + 'placeholder'">
+			<div class="bg"></div>
+			<div class="fg"></div>
+			<div class="name">{{year.year}}</div>
+		</div>
+	</div>
 </div>
-<div><h3>Timeline is under construction</h3></div>
 <div></div>

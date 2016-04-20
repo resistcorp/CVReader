@@ -13,46 +13,53 @@
 	.controller('ReadCVCtrl', ['$scope', '$http', '$q', '$timeout', '$routeParams', '$rootScope', 'StandardData', ReadCVCtrl]);
 
 	function ReadCVCtrl($scope, $http, $q, $timeout, $routeParams, $rootScope, SData) {
-		var myData = {
+		var names = $routeParams.CVNames? $routeParams.CVNames.split('/') : [],
+			myData = {
 				treated : false
 			},
-			name = $routeParams.CVName,
+			overlays = {},
 			chain = $q.when(SData).then(
 				function(_standard){
 					angular.merge(myData, _standard.data);
 					$scope.serialized = JSON.stringify(myData);
 					$rootScope.progress = "..";
 				}
-			);
+			),
+			promises = [
+				$timeout(1200)//let the user enjoy my loader anim :D
+			];
 		$rootScope.title = $scope.title = "My CV reader";
 		$scope.CVName = name;
 		$rootScope.loading = true;
 		$rootScope.progress = ".";
 		$scope.serialized = JSON.stringify(myData);
-		if(name != "standard"){
-			chain = chain.then(
-					$http.get('./CVData/' + name + ".json")
-					.then(function _success(response) {
-						console.log("extending", myData, "with", response.data, response.data.head.title);
-						//overlay a new object over the standard CV
-						angular.merge(myData, response.data);
-						console.log("result :", myData, response.data);
-						$rootScope.progress = "...";
-						$scope.serialized = JSON.stringify(myData);
-					  }, function _error(response) {
-						$scope.serialized = JSON.stringify(myData);
-						$rootScope.progress = "...";
-						$rootScope.loading = false;
-					  })
-			);
+		for (var i = 0; i < names.length; i++) {
+			if(names[i] != ""){
+				var name = names[i];
+				promises.push(loadJsonIntoObject(name, overlays, $http));
+			}
 		}
-		$q.all([
-			$timeout(1200),//let the user enjoy my loader anim :D
-			chain
-		]).then(function(){
+		$q.all(promises).then(function(){
+			for (var i = 0; i < names.length; i++) {
+				var name = names[i];
+				if(overlays[name]){
+					console.log("extending", myData, "with", overlays[name], overlays[name].head.title);
+					//overlay a new object over the standard CV
+					angular.merge(myData, overlays[name]);
+					console.log("result :", myData, overlays[name]);
+					$rootScope.progress = "...";
+					$scope.serialized = JSON.stringify(myData);
+				}
+			}
 			console.log("final data :",myData);
 			TreatCV(myData, $scope, $rootScope);
 		})
+	}
+	function loadJsonIntoObject(_name, _obj, $http){
+		return $http.get('./CVData/' + _name + ".json")
+						.then(function _success(response) {
+							_obj[_name] = response.data;
+						  })
 	}
 	function TreatCV(_data, $scope, $rootScope){
 		_data.treated = true;
