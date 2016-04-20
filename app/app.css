@@ -142,6 +142,7 @@ ul.counterLst{
   .middleZone{
     flex-direction: row;
     padding: 0 25px;
+    order: 1;
   }
   #body .main-section{
     flex-direction: column;
