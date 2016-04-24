@@ -1,8 +1,13 @@
-<div></div>
+<div class="periodContainer work">
+	<div ng-repeat="period in workPeriods" class="" ng-class="getPeriodClass(period)" type="flex-grow: {{period.length}}">{{period.title}}
+	</div>
+</div>
+<div class="periodContainer academic">
+</div>
 <div>
 	<hr class="timelineBase" ng-if="dates.length"/>
 	<div class="datesContainer">
-		<div ng-repeat="(i, year) in dates" ng-class="'year ' + 'placeholder'">
+		<div ng-repeat="(i, year) in dates"class="year" ng-class="year.used? 'used' : 'unused' ">
 			<div class="bg"></div>
 			<div class="fg"></div>
 			<div class="name">{{year.year}}</div>

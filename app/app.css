@@ -206,7 +206,7 @@ ul.counterLst{
   min-height: 250px;
   width: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-around;
 }
 .timelineBase{
@@ -222,8 +222,19 @@ ul.counterLst{
   padding: 0;
   width : calc(100% - 40px);
 }
+#timeline .periodContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 25px;
+}
 #timeline .year{
   /* position: absolute; */
+}
+#timeline .year.unused{
+  /* position: absolute; */
+  visibility: hidden;
 }
 #timeline .year .bg, #timeline .year .fg{
   display: block;
